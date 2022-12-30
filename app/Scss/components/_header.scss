@@ -2,6 +2,12 @@
 
 .header {
   &__nav {
+    &-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+    }
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -46,5 +52,20 @@
 
   &__cta {
     display: none;
+  }
+
+  &__hero {
+    &-text {
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: 900;
+    background-image: u.$primaryGradient;
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

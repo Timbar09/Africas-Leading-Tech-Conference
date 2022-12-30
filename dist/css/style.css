@@ -17,7 +17,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   background-color: #ffffff;
-  color: #26231f;
+  color: #272a31;
 }
 @media (min-width: 64em) {
   body {
@@ -31,7 +31,7 @@ h4 {
   font-weight: 700;
   line-height: 1.2;
   padding: 1rem 0;
-  color: #171716;
+  color: #121417;
 }
 
 p {
@@ -199,6 +199,12 @@ a {
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
+.header__nav-section {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
 .header__hamburger {
   cursor: pointer;
   border: none;
@@ -211,7 +217,7 @@ a {
   display: inline-block;
   height: 0.45rem;
   width: 2.5rem;
-  background-color: #171716;
+  background-color: #121417;
 }
 .header__hamburger > span:not(:first-child) {
   margin-top: 5px;
@@ -232,4 +238,16 @@ a {
 }
 .header__cta {
   display: none;
+}
+.header__hero-text {
+  text-align: left;
+}
+.header__title {
+  font-size: 3em;
+  font-weight: 900;
+  background-image: linear-gradient(45deg, #cd5401, #ff8705);
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
 }/*# sourceMappingURL=style.css.map */
