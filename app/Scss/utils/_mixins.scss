@@ -4,7 +4,7 @@
 $breakpoints-up: (
   'medium': '40em',
   'large': '64em',
-  'xlarge': '87.5em',
+  'x-large': '87.5em',
 );
 
 @mixin breakpoint-up($size) {

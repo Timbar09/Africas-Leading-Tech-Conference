@@ -68,7 +68,6 @@ a {
   position: relative;
   display: inline-block;
   border-radius: 5px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
   transition: box-shadow 150ms ease-in-out;
 }
 .button:hover {
@@ -77,33 +76,35 @@ a {
 .button-link {
   position: relative;
   display: inline-block;
-  border-radius: inherit;
-  font-weight: 400;
+  font-weight: 700;
   padding: 0.275rem 1.5rem;
-  background-color: transparent;
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
 }
 .button-primary {
   background-color: #ffffff;
 }
-.button-primary-link {
-  background: linear-gradient(45deg, #cd5401, #ff8705);
+.button-primary .button-link {
   padding: 0.375rem 1.5rem;
+  color: #ffffff;
+  background: linear-gradient(45deg, #cd5401, #ff8705);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+  border-radius: inherit;
   transition: opacity 150ms ease-in-out;
 }
-.button-primary-link:hover {
+.button-primary .button-link:hover {
   opacity: 0.825;
 }
 .button-secondary {
-  background-color: linear-gradient(45deg, #cd5401, #ff8705);
+  background: linear-gradient(45deg, #cd5401, #ff8705);
+  padding: 4px;
 }
-.button-secondary-link {
+.button-secondary .button-link {
+  color: #cd5401;
   background-color: #ffffff;
-  inset: 3px;
-  color: #ff8705;
+  border-radius: 2px;
   transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
 }
-.button-secondary:hover-link {
+.button-secondary:hover .button-link {
   background-color: transparent;
   color: #ffffff;
 }
