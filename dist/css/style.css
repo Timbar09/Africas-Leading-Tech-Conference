@@ -130,7 +130,7 @@ a {
 .flex-nowrap {
   flex-wrap: nowrap;
 }
-.flex-column {
+.flex-collumn {
   flex-direction: column;
 }
 
@@ -193,4 +193,43 @@ a {
   .container-pl {
     padding-left: 2.5rem;
   }
+}
+
+.header__nav {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.header__hamburger {
+  cursor: pointer;
+  border: none;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: transparent;
+}
+.header__hamburger > span {
+  position: relative;
+  display: inline-block;
+  height: 0.45rem;
+  width: 2.5rem;
+  background-color: #171716;
+}
+.header__hamburger > span:not(:first-child) {
+  margin-top: 5px;
+}
+@media (min-width: 64em) {
+  .header__hamburger {
+    display: none;
+  }
+}
+.header__hamburger:hover > span {
+  background-color: #ff8705;
+}
+.header__logo {
+  display: none;
+}
+.header__menu {
+  display: none;
+}
+.header__cta {
+  display: none;
 }/*# sourceMappingURL=style.css.map */

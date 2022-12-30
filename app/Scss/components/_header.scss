@@ -1,0 +1,50 @@
+@use '../utils/' as u;
+
+.header {
+  &__nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+
+    > span {
+      position: relative;
+      display: inline-block;
+      height: 0.45rem;
+      width: 2.5rem;
+      background-color: u.$titleColor;
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+
+    @include u.breakpoint-up(large) {
+      display: none;
+    }
+
+    &:hover {
+      > span {
+        background-color: u.$primary;
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  &__cta {
+    display: none;
+  }
+}
