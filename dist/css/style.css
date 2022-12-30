@@ -1,1 +1,26 @@
-/*# sourceMappingURL=style.css.map */
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+  font-size: 0.85em;
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  background-color: #ffffff;
+  color: #26231f;
+}
+@media (min-width: 64em) {
+  body {
+    font-size: 1em;
+  }
+}/*# sourceMappingURL=style.css.map */
