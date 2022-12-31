@@ -15,7 +15,7 @@ p {
 
 a {
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: u.$radiusMed;
   font-size: inherit;
 }
 
@@ -23,18 +23,18 @@ a {
   text-align: center;
 
   &__title {
-    font-size: 1.15em;
+    font-size: 1.5em;
 
     @include u.breakpoint-up(medium) {
-      font-size: 1.25em;
+      font-size: 1.75em;
     }
   }
 
   &__sub-tile {
-    font-size: 1.075em;
+    font-size: 1.25em;
 
     @include u.breakpoint-up(medium) {
-      font-size: 1.125em;
+      font-size: 1.5em;
     }
   }
 }
@@ -44,18 +44,18 @@ a {
 .button {
   position: relative;
   display: inline-block;
-  border-radius: 5px;
+  border-radius: u.$radiusMed;
   transition: box-shadow 150ms ease-in-out;
 
   &:hover {
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
   }
 
   &-link {
     position: relative;
     display: inline-block;
     font-weight: 700;
-    padding: 0.275rem 1.5rem;
+    padding: 0.475rem 1.75rem;
     transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
   }
 
@@ -63,10 +63,10 @@ a {
     background-color: u.$white;
 
     .button-link {
-      padding: 0.375rem 1.5rem;
+      padding: 0.575rem 1.75rem;
       color: u.$white;
       background: u.$primaryGradient;
-      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.35);
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
       border-radius: inherit;
       transition: opacity 150ms ease-in-out;
 
@@ -78,12 +78,12 @@ a {
 
   &-secondary {
     background: u.$primaryGradient;
-    padding: 4px;
+    padding: 0.25rem;
 
     .button-link {
       color: u.$primaryDark;
       background-color: u.$white;
-      border-radius: 2px;
+      border-radius: u.$radiusSm;
       transition: background-color 150ms ease-in-out, color 150ms ease-in-out;
     }
 

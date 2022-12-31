@@ -15,13 +15,13 @@ body {
   margin: 0;
   padding: 0;
   line-height: 1.4;
-  font-size: 0.85em;
+  font-size: 0.9375rem;
   font-family: 'Lato', sans-serif;
   font-weight: 400;
   background-color: u.$white;
   color: u.$textColor;
 
   @include u.breakpoint-up(large) {
-    font-size: 1em;
+    font-size: 1rem;
   }
 }

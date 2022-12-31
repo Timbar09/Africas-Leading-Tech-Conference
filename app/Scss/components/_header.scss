@@ -17,7 +17,7 @@
     cursor: pointer;
     border: none;
     padding: 0.25rem;
-    border-radius: 0.25rem;
+    border-radius: u.$radiusMed;
     background-color: transparent;
 
     > span {
@@ -28,7 +28,7 @@
       background-color: u.$titleColor;
 
       &:not(:first-child) {
-        margin-top: 5px;
+        margin-top: 0.25rem;
       }
     }
 
@@ -58,7 +58,6 @@
   &__hero {
     .container {
       position: relative;
-      height: 100vh;
       background: url('/images/hero-bg-mobile.svg');
       background-repeat: no-repeat;
       background-size: cover;
@@ -66,23 +65,87 @@
 
       @include u.before {
         inset: 0;
-        background-color: #ffffffea;
+        background-color: #ffffffdb;
         backdrop-filter: blur(5px);
       }
     }
 
     &-text {
+      height: max(31.25rem, 100vh);
+      gap: 2em;
+      background-image: url('/images/1074417_7103.jpg');
       position: relative;
       text-align: left;
+      max-width: 23.4375rem;
     }
   }
 
   &__title {
-    font-size: 3em;
+    position: relative;
+    margin: 0;
+    padding: 0.5rem 0;
+    font-size: 2.5rem;
     font-weight: 900;
     background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
     background-repeat: repeat;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    @include u.before {
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0.15rem;
+      background: u.$primaryGradient;
+      border-radius: u.$radiusLg;
+    }
+
+    @include u.after {
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 0.15rem;
+      background: u.$primaryGradient;
+      border-radius: u.$radiusLg;
+    }
+  }
+
+  &__description {
+    &-summary {
+      padding: 0.75rem 1.25rem;
+      font-size: 1.15rem;
+      font-weight: 700;
+      background-color: #ffffff91;
+      border-radius: u.$radiusMed;
+      border: solid 0.25rem u.$white;
+    }
+
+    &-time {
+      font-size: 1.25rem;
+      font-weight: 400;
+
+      span {
+        display: inline-block;
+
+        &:first-child {
+          position: relative;
+          padding-bottom: 0.5rem;
+
+          @include u.before {
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0.1rem;
+            background: u.$primaryGradient;
+            border-radius: u.$radiusLg;
+          }
+        }
+
+        &:last-child {
+          display: block;
+          margin-top: 0.5rem;
+        }
+      }
+    }
   }
 }
