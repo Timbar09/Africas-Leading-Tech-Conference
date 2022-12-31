@@ -195,15 +195,14 @@ a {
   }
 }
 
-.header__nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
 .header__nav-section {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  z-index: 1000;
 }
 .header__hamburger {
   cursor: pointer;
@@ -239,13 +238,30 @@ a {
 .header__cta {
   display: none;
 }
+.header__hero .container {
+  position: relative;
+  height: 100vh;
+  background: url("/images/hero-bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.header__hero .container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 255, 255, 0.9176470588);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
 .header__hero-text {
+  position: relative;
   text-align: left;
 }
 .header__title {
   font-size: 3em;
   font-weight: 900;
-  background-image: linear-gradient(45deg, #cd5401, #ff8705);
+  background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
   background-repeat: repeat;
   -webkit-background-clip: text;
           background-clip: text;

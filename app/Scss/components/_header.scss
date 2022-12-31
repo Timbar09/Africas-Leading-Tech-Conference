@@ -7,9 +7,10 @@
       top: 0;
       left: 0;
       right: 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      z-index: 1000;
     }
-    padding-top: 1rem;
-    padding-bottom: 1rem;
   }
 
   &__hamburger {
@@ -55,7 +56,23 @@
   }
 
   &__hero {
+    .container {
+      position: relative;
+      height: 100vh;
+      background: url('/images/hero-bg-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      @include u.before {
+        inset: 0;
+        background-color: #ffffffea;
+        backdrop-filter: blur(5px);
+      }
+    }
+
     &-text {
+      position: relative;
       text-align: left;
     }
   }
@@ -63,7 +80,7 @@
   &__title {
     font-size: 3em;
     font-weight: 900;
-    background-image: u.$primaryGradient;
+    background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
     background-repeat: repeat;
     background-clip: text;
     -webkit-text-fill-color: transparent;
