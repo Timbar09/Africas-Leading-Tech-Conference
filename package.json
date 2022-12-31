@@ -1,0 +1,19 @@
+{
+  "name": "africas-leading-tech-conference",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Timbar09/Africas-Leading-Tech-Conference.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Timbar09/Africas-Leading-Tech-Conference/issues"
+  },
+  "homepage": "https://github.com/Timbar09/Africas-Leading-Tech-Conference#readme"
+}
