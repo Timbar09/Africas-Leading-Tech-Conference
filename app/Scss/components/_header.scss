@@ -1,0 +1,88 @@
+@use '../utils/' as u;
+
+.header {
+  &__nav {
+    &-section {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      z-index: 1000;
+    }
+  }
+
+  &__hamburger {
+    cursor: pointer;
+    border: none;
+    padding: 0.25rem;
+    border-radius: 0.25rem;
+    background-color: transparent;
+
+    > span {
+      position: relative;
+      display: inline-block;
+      height: 0.45rem;
+      width: 2.5rem;
+      background-color: u.$titleColor;
+
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+    }
+
+    @include u.breakpoint-up(large) {
+      display: none;
+    }
+
+    &:hover {
+      > span {
+        background-color: u.$primary;
+      }
+    }
+  }
+
+  &__logo {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+  }
+
+  &__cta {
+    display: none;
+  }
+
+  &__hero {
+    .container {
+      position: relative;
+      height: 100vh;
+      background: url('/images/hero-bg-mobile.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+
+      @include u.before {
+        inset: 0;
+        background-color: #ffffffea;
+        backdrop-filter: blur(5px);
+      }
+    }
+
+    &-text {
+      position: relative;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 3em;
+    font-weight: 900;
+    background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
+    background-repeat: repeat;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}

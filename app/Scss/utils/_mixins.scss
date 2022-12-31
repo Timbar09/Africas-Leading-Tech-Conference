@@ -1,0 +1,34 @@
+// BREAKPOINTS
+
+// 640px, 1024px, 1400px
+$breakpoints-up: (
+  'medium': '40em',
+  'large': '64em',
+  'x-large': '87.5em',
+);
+
+@mixin breakpoint-up($size) {
+  @media (min-width: map-get($breakpoints-up, $size)) {
+    @content;
+  }
+}
+
+//PSEUDO ELEMENTS
+
+// BEFORE
+@mixin before {
+  &::before {
+    content: '';
+    position: absolute;
+    @content;
+  }
+}
+
+// AFTER
+@mixin after {
+  &::after {
+    content: '';
+    position: absolute;
+    @content;
+  }
+}
