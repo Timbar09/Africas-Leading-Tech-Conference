@@ -1,0 +1,14 @@
+@use '../utils/' as u;
+
+.partner {
+  background-color: u.$titleColor;
+
+  &__title {
+    color: #89898b;
+  }
+
+  &__grid {
+    padding-top: 2.5rem;
+    gap: 1rem 4rem;
+  }
+}

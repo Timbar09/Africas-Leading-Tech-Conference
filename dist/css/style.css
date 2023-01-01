@@ -476,4 +476,15 @@ a {
 .speaker__bio {
   margin: 0;
   padding-top: 0.5rem;
+}
+
+.partner {
+  background-color: #272a31;
+}
+.partner__title {
+  color: #89898b;
+}
+.partner__grid {
+  padding-top: 2.5rem;
+  gap: 1rem 4rem;
 }/*# sourceMappingURL=style.css.map */
