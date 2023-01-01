@@ -1,0 +1,45 @@
+@use '../utils/' as u;
+
+.about {
+  &__hero {
+    background-color: u.$lightGrey;
+
+    .container {
+      gap: 1rem;
+    }
+
+    #about__title {
+      &::before {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    p {
+      margin: 0;
+      padding: 1rem;
+    }
+
+    &-description {
+      border: u.$grey solid 1px;
+      border-radius: u.$radiusSm;
+      background-color: u.$white;
+    }
+
+    &-link {
+      display: block;
+      font-weight: 700;
+      color: u.$titleColor;
+      text-decoration: underline;
+
+      &:hover {
+        color: u.$primary;
+        text-decoration: none;
+      }
+      transition: color 100ms ease-in-out;
+    }
+  }
+}

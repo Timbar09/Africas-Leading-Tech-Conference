@@ -17,7 +17,7 @@ body {
   font-family: "Lato", sans-serif;
   font-weight: 400;
   background-color: #ffffff;
-  color: #3e434f;
+  color: #4d525d;
 }
 @media (min-width: 64em) {
   body {
@@ -468,7 +468,7 @@ a {
   content: "";
   position: absolute;
   inset: auto auto 0 0;
-  background: #3e434f;
+  background: #4d525d;
   height: 0.15em;
   width: 15%;
   border-radius: 15rem;
@@ -487,6 +487,39 @@ a {
 .partner__grid {
   padding-top: 2.5rem;
   gap: 1rem 4rem;
+}
+
+.about__hero {
+  background-color: #efefef;
+}
+.about__hero .container {
+  gap: 1rem;
+}
+.about__hero #about__title::before {
+  display: none;
+}
+.about__hero #about__title::after {
+  display: none;
+}
+.about__hero p {
+  margin: 0;
+  padding: 1rem;
+}
+.about__hero-description {
+  border: #d3d3d3 solid 1px;
+  border-radius: 0.25rem;
+  background-color: #ffffff;
+}
+.about__hero-link {
+  display: block;
+  font-weight: 700;
+  color: #272a31;
+  text-decoration: underline;
+  transition: color 100ms ease-in-out;
+}
+.about__hero-link:hover {
+  color: #ff8705;
+  text-decoration: none;
 }
 
 .footer .container {
