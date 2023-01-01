@@ -24,10 +24,20 @@ a {
   text-align: center;
 
   &-title {
+    margin: auto;
+    max-width: max-content;
+    position: relative;
     font-size: 1.5em;
 
     @include u.breakpoint-up(medium) {
       font-size: 1.75em;
+    }
+
+    @include u.before(auto auto 0 50%, u.$primaryGradient) {
+      translate: -50%;
+      width: 25%;
+      height: 0.1em;
+      border-radius: u.$radiusXl;
     }
   }
 

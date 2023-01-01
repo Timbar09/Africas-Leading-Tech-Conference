@@ -20,7 +20,7 @@
     border-radius: u.$radiusMed;
     background-color: transparent;
 
-    > span {
+    &-stroke {
       position: relative;
       display: inline-block;
       height: 0.45rem;
@@ -37,7 +37,7 @@
     }
 
     &:hover {
-      > span {
+      .header__hamburger-stroke {
         background-color: u.$primary;
       }
     }
@@ -63,7 +63,7 @@
       background-size: cover;
       background-position: center center;
 
-      @include u.before(0, #ffffffdb) {
+      @include u.before(0, linear-gradient(90deg, u.$white, #ffffffdb 90%, u.$white)) {
         backdrop-filter: blur(5px);
       }
     }
@@ -114,6 +114,7 @@
     }
 
     &-time {
+      padding: 0.75rem 1.25rem;
       font-size: 1.25rem;
       font-weight: 400;
 

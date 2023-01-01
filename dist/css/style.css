@@ -49,12 +49,27 @@ a {
   text-align: center;
 }
 .section-title {
+  margin: auto;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
+  position: relative;
   font-size: 1.5em;
 }
 @media (min-width: 40em) {
   .section-title {
     font-size: 1.75em;
   }
+}
+.section-title::before {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 50%;
+  background: linear-gradient(45deg, #cd5401, #ff8705);
+  translate: -50%;
+  width: 25%;
+  height: 0.1em;
+  border-radius: 15rem;
 }
 .section-sub-tile {
   font-size: 1.25em;
@@ -212,14 +227,14 @@ a {
   border-radius: 0.5rem;
   background-color: transparent;
 }
-.header__hamburger > span {
+.header__hamburger-stroke {
   position: relative;
   display: inline-block;
   height: 0.45rem;
   width: 2.5rem;
   background-color: #272a31;
 }
-.header__hamburger > span:not(:first-child) {
+.header__hamburger-stroke:not(:first-child) {
   margin-top: 0.25rem;
 }
 @media (min-width: 64em) {
@@ -227,7 +242,7 @@ a {
     display: none;
   }
 }
-.header__hamburger:hover > span {
+.header__hamburger:hover .header__hamburger-stroke {
   background-color: #ff8705;
 }
 .header__logo {
@@ -250,7 +265,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.8588235294);
+  background: linear-gradient(90deg, #ffffff, rgba(255, 255, 255, 0.8588235294) 90%, #ffffff);
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -302,6 +317,7 @@ a {
   border: solid 0.25rem #ffffff;
 }
 .header__description-time {
+  padding: 0.75rem 1.25rem;
   font-size: 1.25rem;
   font-weight: 400;
 }
@@ -327,9 +343,16 @@ a {
 }
 
 .program {
+  position: relative;
   color: #d3d3d3;
   background-color: #272a31;
   background-image: url("/images/connected.png");
+}
+.program::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3);
 }
 .program__title {
   color: inherit;
@@ -337,7 +360,7 @@ a {
 .program__grid {
   list-style: none;
   margin: 0;
-  padding: 1.5em 0 0;
+  padding: 2.5em 0 0;
   display: grid;
   grid-template-columns: 1fr;
   grid-gap: 0.5rem;
@@ -372,4 +395,15 @@ a {
 }
 .program__card-description {
   margin: 0;
+}
+.program__link {
+  margin-top: 2.5rem;
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: underline;
+  transition: color 100ms ease-in-out;
+}
+.program__link:hover {
+  color: #ff8705;
+  text-decoration: none;
 }/*# sourceMappingURL=style.css.map */
