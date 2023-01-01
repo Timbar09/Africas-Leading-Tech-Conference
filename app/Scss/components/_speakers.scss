@@ -1,0 +1,71 @@
+@use '../utils/' as u;
+
+.speaker {
+  &__grid {
+    padding: 2.5rem 0 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 2rem;
+  }
+
+  &__card {
+    gap: 1em;
+
+    @include u.breakpoint-up(small) {
+      flex-direction: row;
+      align-items: center;
+      gap: 2em;
+    }
+  }
+
+  &__image-photo {
+    position: relative;
+    display: inline-block;
+    width: 8rem;
+
+    @include u.before(0 auto auto 0, u.$primary) {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: u.$radiusXl;
+      scale: 1.5;
+      z-index: -1;
+    }
+
+    @include u.breakpoint-up(medium) {
+      width: 10rem;
+    }
+
+    img {
+      padding: 0.1rem;
+      width: 100%;
+      background: u.$white;
+      border: u.$titleColor solid 0.25rem;
+      border-radius: u.$radiusXl;
+    }
+  }
+
+  &__text {
+    text-align: left;
+  }
+
+  &__title {
+    position: relative;
+    margin: 0;
+    padding-bottom: 0.5rem;
+    color: u.$primary;
+    font-style: italic;
+
+    @include u.before(auto auto 0 0, u.$textColor) {
+      height: 0.15em;
+      width: 15%;
+      border-radius: u.$radiusXl;
+    }
+  }
+
+  &__bio {
+    margin: 0;
+    padding-top: 0.5rem;
+  }
+}

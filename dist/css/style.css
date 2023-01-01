@@ -406,4 +406,74 @@ a {
 .program__link:hover {
   color: #ff8705;
   text-decoration: none;
+}
+
+.speaker__grid {
+  padding: 2.5rem 0 0;
+  margin: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 2rem;
+}
+.speaker__card {
+  gap: 1em;
+}
+@media (min-width: 23.4375em) {
+  .speaker__card {
+    flex-direction: row;
+    align-items: center;
+    gap: 2em;
+  }
+}
+.speaker__image-photo {
+  position: relative;
+  display: inline-block;
+  width: 8rem;
+}
+.speaker__image-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  background: #ff8705;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 15rem;
+  scale: 1.5;
+  z-index: -1;
+}
+@media (min-width: 40em) {
+  .speaker__image-photo {
+    width: 10rem;
+  }
+}
+.speaker__image-photo img {
+  padding: 0.1rem;
+  width: 100%;
+  background: #ffffff;
+  border: #272a31 solid 0.25rem;
+  border-radius: 15rem;
+}
+.speaker__text {
+  text-align: left;
+}
+.speaker__title {
+  position: relative;
+  margin: 0;
+  padding-bottom: 0.5rem;
+  color: #ff8705;
+  font-style: italic;
+}
+.speaker__title::before {
+  content: "";
+  position: absolute;
+  inset: auto auto 0 0;
+  background: #3e434f;
+  height: 0.15em;
+  width: 15%;
+  border-radius: 15rem;
+}
+.speaker__bio {
+  margin: 0;
+  padding-top: 0.5rem;
 }/*# sourceMappingURL=style.css.map */
