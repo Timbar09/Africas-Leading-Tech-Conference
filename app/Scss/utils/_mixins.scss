@@ -2,6 +2,7 @@
 
 // 640px, 1024px, 1400px
 $breakpoints-up: (
+  'small': '23.4375em',
   'medium': '40em',
   'large': '64em',
   'x-large': '87.5em',
@@ -16,19 +17,23 @@ $breakpoints-up: (
 //PSEUDO ELEMENTS
 
 // BEFORE
-@mixin before {
+@mixin before($inset, $background) {
   &::before {
     content: '';
     position: absolute;
+    inset: $inset;
+    background: $background;
     @content;
   }
 }
 
 // AFTER
-@mixin after {
+@mixin after($inset, $background) {
   &::after {
     content: '';
     position: absolute;
+    inset: $inset;
+    background: $background;
     @content;
   }
 }

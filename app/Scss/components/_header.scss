@@ -63,15 +63,14 @@
       background-size: cover;
       background-position: center center;
 
-      @include u.before {
-        inset: 0;
-        background-color: #ffffffdb;
+      @include u.before(0, #ffffffdb) {
         backdrop-filter: blur(5px);
       }
     }
 
     &-text {
-      height: max(31.25rem, 100vh);
+      height: 100vh;
+      min-height: 31.25rem;
       gap: 2em;
       background-image: url('/images/1074417_7103.jpg');
       position: relative;
@@ -91,22 +90,16 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 
-    @include u.before {
-      top: 0;
-      left: 0;
+    @include u.before(0 auto auto 0, u.$primaryGradient) {
       width: 100%;
       height: 0.15rem;
-      background: u.$primaryGradient;
-      border-radius: u.$radiusLg;
+      border-radius: u.$radiusXl;
     }
 
-    @include u.after {
-      bottom: 0;
-      left: 0;
+    @include u.after(auto auto 0 0, u.$primaryGradient) {
       width: 100%;
       height: 0.15rem;
-      background: u.$primaryGradient;
-      border-radius: u.$radiusLg;
+      border-radius: u.$radiusXl;
     }
   }
 
@@ -131,12 +124,9 @@
           position: relative;
           padding-bottom: 0.5rem;
 
-          @include u.before {
-            bottom: 0;
-            left: 0;
+          @include u.before(auto auto 0 0, u.$primaryGradient) {
             width: 100%;
             height: 0.1rem;
-            background: u.$primaryGradient;
             border-radius: u.$radiusLg;
           }
         }

@@ -3,9 +3,10 @@
 h2,
 h3,
 h4 {
+  margin: 0;
   font-weight: 700;
   line-height: 1.2;
-  padding: 1rem 0;
+  padding: 0 0 1rem;
   color: u.$titleColor;
 }
 
@@ -22,7 +23,7 @@ a {
 .section {
   text-align: center;
 
-  &__title {
+  &-title {
     font-size: 1.5em;
 
     @include u.breakpoint-up(medium) {
@@ -30,7 +31,7 @@ a {
     }
   }
 
-  &__sub-tile {
+  &-sub-tile {
     font-size: 1.25em;
 
     @include u.breakpoint-up(medium) {
