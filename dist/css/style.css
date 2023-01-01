@@ -487,4 +487,14 @@ a {
 .partner__grid {
   padding-top: 2.5rem;
   gap: 1rem 4rem;
+}
+
+.footer .container {
+  gap: 1rem 4rem;
+}
+.footer__logo {
+  width: 70%;
+}
+.footer__credits {
+  margin: 0;
 }/*# sourceMappingURL=style.css.map */

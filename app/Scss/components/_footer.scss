@@ -1,0 +1,15 @@
+@use '../utils/' as u;
+
+.footer {
+  .container {
+    gap: 1rem 4rem;
+  }
+
+  &__logo {
+    width: 70%;
+  }
+
+  &__credits {
+    margin: 0;
+  }
+}
