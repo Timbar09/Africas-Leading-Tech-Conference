@@ -553,6 +553,53 @@ a {
 .about__logo-image img {
   width: 100%;
 }
+.about__past-description {
+  margin-top: 1rem;
+}
+.about__past-conferences {
+  padding-top: 3em;
+  gap: 1rem;
+}
+@media (min-width: 40em) {
+  .about__past-conferences {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+.about__past-conference {
+  position: relative;
+  color: #efefef;
+  overflow: hidden;
+}
+.about__past-conference img {
+  width: 100%;
+  scale: 1.025;
+  transition: scale 150ms ease-in-out;
+}
+.about__past-conference:hover img {
+  scale: 1.15;
+}
+.about__past-conference:hover .about__past-overlay {
+  background-color: rgba(0, 0, 0, 0.7882352941);
+}
+@media (min-width: 40em) {
+  .about__past-conference {
+    max-width: 30rem;
+  }
+}
+.about__past-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(255, 134, 5, 0.7882352941);
+  display: grid;
+  place-items: center;
+  transition: background-color 150ms ease-in-out;
+}
+.about__past-overlay h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #ffffff;
+}
 
 .footer .container {
   gap: 1rem 4rem;

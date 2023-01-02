@@ -84,4 +84,61 @@
       }
     }
   }
+
+  &__past {
+    &-description {
+      margin-top: 1rem;
+    }
+
+    &-conferences {
+      padding-top: 3em;
+      gap: 1rem;
+
+      @include u.breakpoint-up(medium) {
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
+    &-conference {
+      position: relative;
+      color: u.$lightGrey;
+      overflow: hidden;
+
+      img {
+        width: 100%;
+        scale: 1.025;
+        transition: scale 150ms ease-in-out;
+      }
+
+      &:hover {
+        img {
+          scale: 1.15;
+        }
+
+        .about__past-overlay {
+          background-color: #000000c9;
+        }
+      }
+
+      @include u.breakpoint-up(medium) {
+        max-width: 30rem;
+      }
+    }
+
+    &-overlay {
+      position: absolute;
+      inset: 0;
+      background-color: #ff8605c9;
+      display: grid;
+      place-items: center;
+      transition: background-color 150ms ease-in-out;
+
+      h3 {
+        font-size: 1.5rem;
+        font-weight: 900;
+        color: u.$white;
+      }
+    }
+  }
 }
