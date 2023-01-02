@@ -108,16 +108,11 @@
       img {
         width: 100%;
         scale: 1.025;
-        transition: scale 150ms ease-in-out;
       }
 
       &:hover {
-        img {
-          scale: 1.15;
-        }
-
         .about__past-overlay {
-          background-color: #000000c9;
+          background-color: #00000093;
         }
       }
 
