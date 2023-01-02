@@ -67,7 +67,7 @@ a {
   inset: auto auto 0 50%;
   background: linear-gradient(45deg, #cd5401, #ff8705);
   translate: -50%;
-  width: 25%;
+  width: 1.25em;
   height: 0.1em;
   border-radius: 15rem;
 }
@@ -489,6 +489,15 @@ a {
   gap: 1rem 4rem;
 }
 
+.about__link {
+  color: inherit;
+  text-decoration: underline;
+  transition: color 100ms ease-in-out;
+}
+.about__link:hover {
+  color: #ff8705;
+  text-decoration: none;
+}
 .about__hero {
   background-color: #efefef;
 }
@@ -514,12 +523,35 @@ a {
   display: block;
   font-weight: 700;
   color: #272a31;
-  text-decoration: underline;
-  transition: color 100ms ease-in-out;
 }
-.about__hero-link:hover {
-  color: #ff8705;
-  text-decoration: none;
+.about__logo {
+  border-bottom: 1px solid #d3d3d3;
+}
+.about__logo-text {
+  margin: auto;
+  padding-top: 1rem;
+  max-width: 42.1875rem;
+}
+.about__logo-text p {
+  margin: 0;
+}
+.about__logo-text p:last-child {
+  display: none;
+}
+@media (min-width: 40em) {
+  .about__logo-text p:last-child {
+    display: block;
+  }
+}
+.about__logo-image {
+  margin: 3em auto 0;
+  padding: 1rem;
+  max-width: 35.25rem;
+  border: #d3d3d3 solid 1px;
+  border-radius: 0.25rem;
+}
+.about__logo-image img {
+  width: 100%;
 }
 
 .footer .container {

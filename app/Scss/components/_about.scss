@@ -1,6 +1,17 @@
 @use '../utils/' as u;
 
 .about {
+  &__link {
+    color: inherit;
+    text-decoration: underline;
+    transition: color 100ms ease-in-out;
+
+    &:hover {
+      color: u.$primary;
+      text-decoration: none;
+    }
+  }
+
   &__hero {
     background-color: u.$lightGrey;
 
@@ -33,13 +44,44 @@
       display: block;
       font-weight: 700;
       color: u.$titleColor;
-      text-decoration: underline;
+    }
+  }
 
-      &:hover {
-        color: u.$primary;
-        text-decoration: none;
+  &__logo {
+    border-bottom: 1px solid u.$grey;
+
+    &-text {
+      margin: auto;
+      padding-top: 1rem;
+      max-width: 42.1875rem;
+
+      p {
+        margin: 0;
+
+        &:last-child {
+          display: none;
+        }
       }
-      transition: color 100ms ease-in-out;
+
+      @include u.breakpoint-up(medium) {
+        p {
+          &:last-child {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &-image {
+      margin: 3em auto 0;
+      padding: 1rem;
+      max-width: 35.25rem;
+      border: u.$grey solid 1px;
+      border-radius: u.$radiusSm;
+
+      img {
+        width: 100%;
+      }
     }
   }
 }
