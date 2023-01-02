@@ -44,6 +44,13 @@ body {
 
 // >>> TYPOGRAPHY
 
+// BREAKPOIT WIDTHS 640px, 1024px, 1400px
+
+// small: 23.4375em,
+// medium: 40em,
+// large: 64em,
+// x-large: 87.5em,
+
 h2,
 h3,
 h4 {
@@ -359,7 +366,7 @@ a {
     font-weight: 900;
     background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
     background-repeat: repeat;
-    background-clip: text;
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     &::before {

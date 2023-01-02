@@ -302,7 +302,6 @@ a {
   background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
   background-repeat: repeat;
   -webkit-background-clip: text;
-          background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 .header__title::before {
