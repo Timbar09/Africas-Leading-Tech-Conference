@@ -1,39 +1,39 @@
-// BREAKPOINTS
+// // BREAKPOINTS
 
-// 640px, 1024px, 1400px
-$breakpoints-up: (
-  'small': '23.4375em',
-  'medium': '40em',
-  'large': '64em',
-  'x-large': '87.5em',
-);
+// // 640px, 1024px, 1400px
+// $breakpoints-up: (
+//   'small': '23.4375em',
+//   'medium': '40em',
+//   'large': '64em',
+//   'x-large': '87.5em',
+// );
 
-@mixin breakpoint-up($size) {
-  @media (min-width: map-get($breakpoints-up, $size)) {
-    @content;
-  }
-}
+// @mixin breakpoint-up($size) {
+//   @media (min-width: map-get($breakpoints-up, $size)) {
+//     @content;
+//   }
+// }
 
-//PSEUDO ELEMENTS
+// //PSEUDO ELEMENTS
 
-// BEFORE
-@mixin before($inset, $background) {
-  &::before {
-    content: '';
-    position: absolute;
-    inset: $inset;
-    background: $background;
-    @content;
-  }
-}
+// // BEFORE
+// @mixin before($inset, $background) {
+//   &::before {
+//     content: '';
+//     position: absolute;
+//     inset: $inset;
+//     background: $background;
+//     @content;
+//   }
+// }
 
-// AFTER
-@mixin after($inset, $background) {
-  &::after {
-    content: '';
-    position: absolute;
-    inset: $inset;
-    background: $background;
-    @content;
-  }
-}
+// // AFTER
+// @mixin after($inset, $background) {
+//   &::after {
+//     content: '';
+//     position: absolute;
+//     inset: $inset;
+//     background: $background;
+//     @content;
+//   }
+// }
