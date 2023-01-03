@@ -287,7 +287,7 @@ a {
   }
 }
 .header__menu {
-  visibility: visible;
+  visibility: hidden;
   position: absolute;
   top: 4.3125rem;
   left: 0;
@@ -695,6 +695,9 @@ a {
   background-color: var(--lightGrey);
 }
 .about__hero .container {
+  height: 100vh;
+  min-height: 37.25rem;
+  max-width: 815px;
   gap: 1rem;
 }
 .about__hero #about__title::before {
@@ -742,6 +745,11 @@ a {
   max-width: 35.25rem;
   border: var(--grey) solid 1px;
   border-radius: var(--radiusSm);
+}
+@media (min-width: 40em) {
+  .about__logo-image {
+    padding: 2.5rem;
+  }
 }
 .about__logo-image img {
   width: 100%;
