@@ -50,6 +50,12 @@ h4 {
   color: var(--titleColor);
 }
 
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 p {
   margin: 0 0 1rem;
 }
@@ -233,7 +239,13 @@ a {
   right: 0;
   padding-top: 1rem;
   padding-bottom: 1rem;
+  border-bottom: solid blue 2px;
   z-index: 1000;
+}
+@media (min-width: 64em) {
+  .header__nav-section {
+    box-shadow: 0 0.25rem 0.75rem hsla(0deg, 0%, 0%, 0.201);
+  }
 }
 .header__hamburger {
   cursor: pointer;
@@ -263,8 +275,17 @@ a {
 .header__logo {
   display: none;
 }
+@media (min-width: 64em) {
+  .header__logo {
+    display: inline-block;
+  }
+}
 .header__menu {
-  display: none;
+  position: absolute;
+  top: 3.3125rem;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.493);
 }
 .header__cta {
   display: none;
@@ -280,7 +301,7 @@ a {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.8588235294) 90%, var(--white));
+  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.8588235294) 95%, var(--white));
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -354,6 +375,46 @@ a {
 .header__description-time span:last-child {
   display: block;
   margin-top: 0.5rem;
+}
+.header.open .header__nav-section {
+  background-color: var(--white);
+}
+.header.open .header__menu {
+  opacity: 1;
+}
+.header.open .header__hamburger-stroke {
+  transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+}
+.header.open .header__hamburger-stroke:first-child {
+  top: 0.6875rem;
+  rotate: 45deg;
+}
+.header.open .header__hamburger-stroke:nth-child(2) {
+  opacity: 0;
+}
+.header.open .header__hamburger-stroke:last-child {
+  top: -0.6875rem;
+  rotate: -45deg;
+}
+.header.close .header__nav-section {
+  background-color: transparent;
+}
+.header.close .header__menu {
+  opacity: 0;
+}
+.header.close .header__hamburger-stroke {
+  transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+}
+.header.close .header__hamburger-stroke:first-child {
+  top: 0;
+  rotate: 0;
+}
+.header.close .header__hamburger-stroke:nth-child(2) {
+  opacity: 1;
+}
+.header.close .header__hamburger-stroke:last-child {
+  top: 0;
+  rotate: 0;
 }
 
 .program {
@@ -479,11 +540,12 @@ a {
   font-style: italic;
 }
 .speaker__title::before {
+  content: "";
   position: absolute;
   inset: auto auto 0 0;
   background: var(--textColor);
-  height: 0.15em;
-  width: 15%;
+  height: 0.125em;
+  width: 3rem;
   border-radius: var(--radiusXl);
 }
 .speaker__bio {
