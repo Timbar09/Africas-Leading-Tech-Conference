@@ -73,7 +73,7 @@ p {
 
 a {
   text-decoration: none;
-  border-radius: var(--radius);
+  border-radius: var(--radiusSm);
   font-size: inherit;
 }
 
@@ -124,10 +124,9 @@ a {
   }
 
   &-link {
-    position: relative;
-    display: inline-block;
+    font-size: 1rem;
     font-weight: 700;
-    padding: 0.475rem 1.75rem;
+    padding: 0.5rem 1.75rem;
     transition: background-color 150ms ease-in-out, color 150ms ease-in-out, border 150ms ease-in-out;
   }
 
@@ -205,7 +204,6 @@ a {
 
 // CONTAINER PADDING
 .container {
-  position: relative;
   max-width: 80em; // 1040px
   min-width: 21.25rem;
   margin: 0 auto;
@@ -283,6 +281,10 @@ a {
 
 .header {
   &__nav {
+    @media (min-width: 64em) {
+      display: flex;
+    }
+
     &-section {
       position: fixed;
       top: 0;
@@ -290,10 +292,12 @@ a {
       right: 0;
       padding-top: 1rem;
       padding-bottom: 1rem;
-      border-bottom: solid blue 2px;
       z-index: 1000;
 
       @media (min-width: 64em) {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        background-color: var(--white);
         box-shadow: 0 0.25rem 0.75rem hsla(0, 0%, 0%, 0.201);
       }
     }
@@ -303,7 +307,7 @@ a {
     cursor: pointer;
     border: none;
     padding: 0.25rem;
-    border-radius: var(--radius);
+    border-radius: var(--radiusSm);
     background-color: transparent;
 
     &-stroke {
@@ -311,6 +315,7 @@ a {
       display: inline-block;
       height: 0.45rem;
       width: 2.5rem;
+      border: solid 1px var(--white);
       background-color: var(--titleColor);
 
       &:not(:first-child) {
@@ -339,14 +344,73 @@ a {
 
   &__menu {
     position: absolute;
-    top: 3.3125rem;
+    top: 4.3125rem;
     left: 0;
+    padding: 2rem 0 4rem;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.493);
+    font-size: 1.75rem;
+    background-color: var(--white);
+
+    @media (min-width: 40em) {
+      padding: 2rem 15% 4rem;
+      font-size: 2rem;
+    }
+
+    @media (min-width: 64em) {
+      position: relative;
+      top: auto;
+      left: auto;
+      flex-direction: row;
+      align-items: center;
+      width: max-content;
+      gap: 3rem;
+      padding: 0;
+      font-size: inherit;
+    }
+  }
+
+  &__link {
+    position: relative;
+    left: 0;
+    color: var(--titleColor);
+    transition: color 150ms ease-in-out, left 150ms ease-in-out;
+  }
+
+  &__menu-option {
+    position: relative;
+    padding: 0.25rem 1rem;
+    transition: background-color 150ms ease-in-out;
+
+    &:hover {
+      background-color: var(--lightGrey);
+
+      .header__link {
+        left: 1rem;
+        color: var(--primary);
+      }
+    }
+
+    @media (min-width: 64em) {
+      padding: 0;
+
+      &:hover {
+        background-color: transparent;
+
+        .header__link {
+          left: 0;
+          color: var(--primary);
+        }
+      }
+    }
   }
 
   &__cta {
     display: none;
+
+    @media (min-width: 64em) {
+      display: block;
+      height: auto;
+    }
   }
 
   &__hero {
@@ -450,42 +514,12 @@ a {
     }
   }
 
-  &.open {
-    .header {
-      &__nav-section {
-        background-color: var(--white);
-      }
-      &__menu {
-        opacity: 1;
-      }
-
-      &__hamburger {
-        &-stroke {
-          transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
-
-          &:first-child {
-            top: 0.6875rem;
-            rotate: 45deg;
-          }
-
-          &:nth-child(2) {
-            opacity: 0;
-          }
-
-          &:last-child {
-            top: -0.6875rem;
-            rotate: -45deg;
-          }
-        }
-      }
-    }
-  }
-
   &.close {
     .header {
       &__nav-section {
         background-color: transparent;
       }
+
       &__menu {
         opacity: 0;
       }
@@ -494,18 +528,50 @@ a {
         &-stroke {
           transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
 
-          &:first-child {
+          &-top {
             top: 0;
-            rotate: 0;
+            rotate: 0deg;
           }
 
-          &:nth-child(2) {
+          &-middle {
             opacity: 1;
           }
 
-          &:last-child {
+          &-bottom {
             top: 0;
-            rotate: 0;
+            rotate: 0deg;
+          }
+        }
+      }
+    }
+  }
+
+  &.open {
+    .header {
+      &__nav-section {
+        background-color: var(--white);
+      }
+
+      &__menu {
+        opacity: 1;
+      }
+
+      &__hamburger {
+        &-stroke {
+          transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+
+          &-top {
+            top: 0.6875rem;
+            rotate: 45deg;
+          }
+
+          &-middle {
+            opacity: 0;
+          }
+
+          &-bottom {
+            top: -0.6875rem;
+            rotate: -45deg;
           }
         }
       }

@@ -15,29 +15,34 @@
     <header class="header">
       <section class="header__nav-section">
         <div class="container container-px">
-          <nav class="header__nav">
+          <nav class="header__nav flex-jc-sb flex-ai-c">
             <button id="btnHumburger" class="header__hamburger flex fle-jc-c flex-ai-c flex-collumn">
               <span class="header__hamburger-stroke header__hamburger-top"></span>
               <span class="header__hamburger-stroke header__hamburger-middle"></span>
               <span class="header__hamburger-stroke header__hamburger-bottom"></span>
             </button>
-            <a href="#" class="header__logo"><img src="images/logo.svg" alt="logo" /></a>
-            <ul class="header__menu container-pall">
-              <li><a href="pages/about.html" class="header__link">About</a></li>
-              <li><a href="pages/about.html" class="header__link">Program</a></li>
-              <li><a href="pages/about.html" class="header__link">Join</a></li>
-              <li><a href="pages/about.html" class="header__link">sponsor</a></li>
-              <li><a href="pages/about.html" class="header__link">News</a></li>
+
+            <a href="#home" class="header__logo"><img src="images/logo.svg" alt="logo" /></a>
+
+            <ul class="header__menu flex flex-collumn">
+              <li class="header__menu-option header__menu-option-home">
+                <a href="#home" class="header__link">Home</a>
+              </li>
+              <li class="header__menu-option"><a href="pages/about.html" class="header__link">About</a></li>
+              <li class="header__menu-option"><a href="#program" class="header__link">Program</a></li>
+              <li class="header__menu-option"><a href="pages/about.html" class="header__link">Join</a></li>
+              <li class="header__menu-option"><a href="#partners" class="header__link">sponsor</a></li>
+              <li class="header__menu-option"><a href="pages/about.html" class="header__link">News</a></li>
             </ul>
 
             <span class="header__cta button button-secondary">
-              <a href="" class="button-secondary-link">Buy ticket</a>
+              <a href="" class="button-link button-secondary-link">Buy ticket</a>
             </span>
           </nav>
         </div>
       </section>
 
-      <section class="header__hero section">
+      <section id="home" class="header__hero section">
         <div class="container container-pall">
           <div class="header__hero-text flex flex-collumn flex-jc-c">
             <h1 class="header__title">AFRICA'S LEADING TECH FESTIVAL 2023</h1>
