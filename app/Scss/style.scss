@@ -716,6 +716,10 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 2rem;
+
+    @media (min-width: 64em) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__card {

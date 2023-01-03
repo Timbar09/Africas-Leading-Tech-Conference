@@ -609,6 +609,11 @@ a {
   grid-template-columns: 1fr;
   grid-gap: 2rem;
 }
+@media (min-width: 64em) {
+  .speaker__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 .speaker__card {
   gap: 1em;
 }
