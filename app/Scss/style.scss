@@ -343,7 +343,7 @@ a {
   }
 
   &__menu {
-    visibility: hidden;
+    visibility: visible;
     position: absolute;
     top: 4.3125rem;
     left: 0;
@@ -382,6 +382,12 @@ a {
     position: relative;
     padding: 0.25rem 1rem;
     transition: background-color 150ms ease-in-out;
+
+    &-home {
+      @media (min-width: 64em) {
+        display: none;
+      }
+    }
 
     &:hover {
       background-color: var(--lightGrey);
@@ -633,9 +639,13 @@ a {
     list-style: none;
     margin: 0;
     padding: 2.5em 0 0;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-gap: 0.5rem;
+    gap: 0.5rem;
+
+    @media (min-width: 40em) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
 
   &__card {
@@ -650,6 +660,15 @@ a {
     @media (min-width: 23.4375em) {
       flex-direction: row;
       text-align: left;
+    }
+
+    @media (min-width: 40em) {
+      flex-direction: column;
+      width: 30%;
+    }
+
+    @media (min-width: 64em) {
+      width: 19%;
     }
 
     &:hover {
@@ -673,6 +692,7 @@ a {
   }
 
   &__link {
+    position: relative;
     margin-top: 2.5rem;
     display: inline-block;
     color: var(--white);
@@ -926,10 +946,18 @@ a {
 .footer {
   .container {
     gap: 1rem 4rem;
+
+    @media (min-width: 40em) {
+      flex-direction: row;
+    }
   }
 
   &__logo {
     width: 70%;
+
+    @media (min-width: 23.4375em) {
+      width: auto;
+    }
   }
 
   &__credits {
