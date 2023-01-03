@@ -176,13 +176,13 @@ a {
   margin: 0 auto;
 }
 .container-pall {
-  padding-top: 2.25rem;
+  padding-top: 5rem;
   padding-right: 1.25rem;
   padding-bottom: 2.25rem;
   padding-left: 1.25rem;
 }
 .container-py {
-  padding-top: 2.25rem;
+  padding-top: 5rem;
   padding-bottom: 2.25rem;
 }
 .container-px {
@@ -190,7 +190,7 @@ a {
   padding-left: 1.25rem;
 }
 .container-pt {
-  padding-top: 2.25rem;
+  padding-top: 5rem;
 }
 .container-pr {
   padding-right: 1.25rem;
@@ -203,13 +203,13 @@ a {
 }
 @media (min-width: 64em) {
   .container-pall {
-    padding-top: 4.5rem;
+    padding-top: 7.5rem;
     padding-right: 2.5rem;
     padding-bottom: 4.5rem;
     padding-left: 2.5rem;
   }
   .container-py {
-    padding-top: 4.5rem;
+    padding-top: 7.5rem;
     padding-bottom: 4.5rem;
   }
   .container-px {
@@ -217,7 +217,7 @@ a {
     padding-left: 2.5rem;
   }
   .container-pt {
-    padding-top: 4.5rem;
+    padding-top: 7.5rem;
   }
   .container-pr {
     padding-right: 2.5rem;
@@ -287,6 +287,7 @@ a {
   }
 }
 .header__menu {
+  visibility: hidden;
   position: absolute;
   top: 4.3125rem;
   left: 0;
@@ -303,6 +304,7 @@ a {
 }
 @media (min-width: 64em) {
   .header__menu {
+    visibility: visible;
     position: relative;
     top: auto;
     left: auto;
@@ -377,11 +379,16 @@ a {
   background-size: cover;
   background-position: center center;
 }
+@media (min-width: 64em) {
+  .header__hero .container {
+    background-image: url("/images/hero-bg-desktop.svg");
+  }
+}
 .header__hero .container::before {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.8588235294) 95%, var(--white));
+  background: linear-gradient(90deg, var(--white), rgba(255, 255, 255, 0.6549019608) 95%, var(--white));
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
 }
@@ -389,10 +396,9 @@ a {
   height: 100vh;
   min-height: 31.25rem;
   gap: 2em;
-  background-image: url("/images/1074417_7103.jpg");
   position: relative;
   text-align: left;
-  max-width: 23.4375rem;
+  max-width: 40rem;
 }
 .header__title {
   position: relative;
@@ -400,10 +406,20 @@ a {
   padding: 0.5rem 0;
   font-size: 2.5rem;
   font-weight: 900;
-  background-image: linear-gradient(45deg, #cd5401, #ff8705, #121417);
+  background-image: url("/images/textbg.jpg");
   background-repeat: repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+@media (min-width: 40em) {
+  .header__title {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 64em) {
+  .header__title {
+    font-size: 4rem;
+  }
 }
 .header__title::before {
   content: "";
