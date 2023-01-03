@@ -694,7 +694,7 @@ a {
   &__link {
     position: relative;
     margin-top: 2.5rem;
-    display: inline-block;
+    display: none;
     color: var(--white);
     text-decoration: underline;
     transition: color 100ms ease-in-out;
@@ -702,6 +702,38 @@ a {
     &:hover {
       color: var(--primary);
       text-decoration: none;
+    }
+
+    @media (min-width: 40em) {
+      display: inline-block;
+    }
+  }
+
+  &__cta {
+    position: relative;
+    margin-top: 2.5rem;
+
+    &-button {
+      display: inline-block;
+      padding: 2rem;
+      font-size: 1.25rem;
+      width: 70%;
+      color: var(--white);
+      background-color: var(--primary);
+      transition: box-shadow 150ms ease-in-out, opacity 150ms ease-in-out, background-color 150ms ease-in-out;
+
+      &:hover {
+        opacity: 0.9;
+        box-shadow: 0 6px 15px rgba(255, 134, 5, 0.35);
+      }
+
+      &:active {
+        background-color: var(--primaryDark);
+      }
+    }
+
+    @media (min-width: 40em) {
+      display: none;
     }
   }
 }
