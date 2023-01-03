@@ -27,6 +27,7 @@ html {
 body {
   margin: 0;
   padding: 0;
+  position: relative;
   line-height: 1.4;
   font-size: 0.9375rem;
   font-family: "Lato", sans-serif;
@@ -38,6 +39,18 @@ body {
   body {
     font-size: 1rem;
   }
+}
+body.noscroll {
+  overflow: hidden;
+}
+body .overlay {
+  visibility: hidden;
+  position: absolute;
+  inset: 0;
+  background: rgba(39, 42, 49, 0.502);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  z-index: 999;
 }
 
 .fade-in {
