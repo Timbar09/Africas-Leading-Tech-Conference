@@ -349,10 +349,25 @@ a {
 .header__cta {
   display: none;
 }
+.header__cta-link {
+  padding: 0.75rem 2rem;
+  color: var(--primary);
+  border-radius: var(--radius);
+  border: solid 3px var(--primary);
+  transition: color 150ms ease-in-out, background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+}
+.header__cta-link:hover {
+  color: var(--white);
+  background-color: var(--primary);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+.header__cta-link:active {
+  color: var(--white);
+  background-color: var(--primaryDark);
+}
 @media (min-width: 64em) {
   .header__cta {
     display: block;
-    height: auto;
   }
 }
 .header__hero .container {
