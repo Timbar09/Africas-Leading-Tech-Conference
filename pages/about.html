@@ -9,38 +9,45 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../dist/css/style.css" />
-    <title>Africa's Leading Conference 2023 | Home</title>
+    <title>Africa's Leading Conference 2023 | About Page</title>
   </head>
   <body class="about">
     <header class="header">
       <section class="header__nav-section">
         <div class="container container-px">
-          <nav class="header__nav">
+          <nav class="header__nav flex-jc-sb flex-ai-c">
             <button id="btnHumburger" class="header__hamburger flex fle-jc-c flex-ai-c flex-collumn">
               <span class="header__hamburger-stroke header__hamburger-top"></span>
               <span class="header__hamburger-stroke header__hamburger-middle"></span>
               <span class="header__hamburger-stroke header__hamburger-bottom"></span>
             </button>
-            <a href="#" class="header__logo"><img src="images/confernce-logo.svg" alt="logo" /></a>
-            <ul class="header__menu">
-              <li><a href="pages/about.html" class="header__link">About</a></li>
-              <li><a href="pages/about.html" class="header__link">Program</a></li>
-              <li><a href="pages/about.html" class="header__link">Join</a></li>
-              <li><a href="pages/about.html" class="header__link">sponsor</a></li>
-              <li><a href="pages/about.html" class="header__link">News</a></li>
+
+            <a href="/index.html" class="header__logo"><img src="/images/logo.svg" alt="logo" /></a>
+
+            <ul class="header__menu flex flex-collumn">
+              <li class="header__menu-option header__menu-option-home">
+                <a href="#about-home" class="header__link">Home</a>
+              </li>
+              <li class="header__menu-option"><a href="#about-home" class="header__link">About</a></li>
+              <li class="header__menu-option"><a href="/index.html#program" class="header__link">Program</a></li>
+              <li class="header__menu-option"><a href="#about-home" class="header__link">Join</a></li>
+              <li class="header__menu-option"><a href="/index.html#partners" class="header__link">sponsor</a></li>
+              <li class="header__menu-option"><a href="#news" class="header__link">News</a></li>
             </ul>
 
-            <span class="header__cta button button-secondary">
-              <a href="" class="button-secondary-link">Buy ticket</a>
-            </span>
+            <div class="header__cta">
+              <span class="header__cta-button">
+                <a href="" class="header__cta-link">Buy ticket</a>
+              </span>
+            </div>
           </nav>
         </div>
       </section>
     </header>
 
     <main class="main">
-      <section class="about__hero section">
-        <div class="container container-pall flex flrx-jc-c flex-collumn">
+      <section id="about-home" class="about__hero section">
+        <div class="container container-pall flex flex-jc-c flex-collumn">
           <h1 id="about__title" class="header__title">AFRICA'S LEADING TECH FESTIVAL 2023</h1>
 
           <p class="about__hero-description">
@@ -83,7 +90,7 @@
         </div>
       </section>
 
-      <section class="about__past section">
+      <section id="news" class="about__past section">
         <div class="container container-pall">
           <h2 class="section-title">See the past Africa's Leading Tech Conferences</h2>
 
