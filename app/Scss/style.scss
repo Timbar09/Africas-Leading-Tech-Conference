@@ -198,14 +198,14 @@ a {
   margin: 0 auto;
 
   &-pall {
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-right: 1.25rem;
     padding-bottom: 2.25rem;
     padding-left: 1.25rem;
   }
 
   &-py {
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-bottom: 2.25rem;
   }
 
@@ -215,7 +215,7 @@ a {
   }
 
   &-pt {
-    padding-top: 5rem;
+    padding-top: 3rem;
   }
 
   &-pr {
@@ -282,6 +282,7 @@ a {
       padding-top: 1rem;
       padding-bottom: 1rem;
       z-index: 1000;
+      transition: background-color 300ms ease-in-out;
 
       @media (min-width: 64em) {
         padding-top: 1.5rem;
@@ -334,7 +335,7 @@ a {
   &__menu {
     visibility: hidden;
     position: absolute;
-    top: 4.3125rem;
+    top: 4.35rem;
     left: 0;
     padding: 2rem 0 4rem;
     width: 100%;
@@ -361,15 +362,21 @@ a {
   }
 
   &__link {
+    padding: 0.25rem 1rem;
+    display: inline-block;
     position: relative;
+    width: 100%;
     left: 0;
     color: var(--titleColor);
     transition: color 150ms ease-in-out, left 150ms ease-in-out;
+
+    @media (min-width: 64em) {
+      padding: 0;
+    }
   }
 
   &__menu-option {
     position: relative;
-    padding: 0.25rem 1rem;
     transition: background-color 150ms ease-in-out;
 
     &-home {
@@ -388,8 +395,6 @@ a {
     }
 
     @media (min-width: 64em) {
-      padding: 0;
-
       &:hover {
         background-color: transparent;
 
@@ -546,23 +551,27 @@ a {
         background-color: transparent;
       }
 
+      &__menu {
+        animation: fade-out 300ms ease-in-out 1 forwards;
+      }
+
       &__hamburger {
         &-stroke {
-          transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+          transition: opacity 150ms 150ms ease-in-out, top 150ms 150ms ease-in-out, rotate 100ms ease-in-out;
+        }
 
-          &-top {
-            top: 0;
-            rotate: 0deg;
-          }
+        &-top {
+          top: 0;
+          rotate: 0deg;
+        }
 
-          &-middle {
-            opacity: 1;
-          }
+        &-middle {
+          opacity: 1;
+        }
 
-          &-bottom {
-            top: 0;
-            rotate: 0deg;
-          }
+        &-bottom {
+          top: 0;
+          rotate: 0deg;
         }
       }
     }
@@ -574,23 +583,27 @@ a {
         background-color: var(--white);
       }
 
+      &__menu {
+        animation: fade-in 300ms ease-in-out 1 forwards;
+      }
+
       &__hamburger {
         &-stroke {
-          transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+          transition: opacity 0ms 150ms ease-in-out, top 150ms ease-in-out, rotate 150ms 150ms ease-in-out;
+        }
 
-          &-top {
-            top: 0.6875rem;
-            rotate: 45deg;
-          }
+        &-top {
+          top: 0.6875rem;
+          rotate: 45deg;
+        }
 
-          &-middle {
-            opacity: 0;
-          }
+        &-middle {
+          opacity: 0;
+        }
 
-          &-bottom {
-            top: -0.6875rem;
-            rotate: -45deg;
-          }
+        &-bottom {
+          top: -0.6875rem;
+          rotate: -45deg;
         }
       }
     }

@@ -213,13 +213,13 @@ a {
   margin: 0 auto;
 }
 .container-pall {
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-right: 1.25rem;
   padding-bottom: 2.25rem;
   padding-left: 1.25rem;
 }
 .container-py {
-  padding-top: 5rem;
+  padding-top: 3rem;
   padding-bottom: 2.25rem;
 }
 .container-px {
@@ -227,7 +227,7 @@ a {
   padding-left: 1.25rem;
 }
 .container-pt {
-  padding-top: 5rem;
+  padding-top: 3rem;
 }
 .container-pr {
   padding-right: 1.25rem;
@@ -280,6 +280,7 @@ a {
   padding-top: 1rem;
   padding-bottom: 1rem;
   z-index: 1000;
+  transition: background-color 300ms ease-in-out;
 }
 @media (min-width: 64em) {
   .header__nav-section {
@@ -326,7 +327,7 @@ a {
 .header__menu {
   visibility: hidden;
   position: absolute;
-  top: 4.3125rem;
+  top: 4.35rem;
   left: 0;
   padding: 2rem 0 4rem;
   width: 100%;
@@ -356,14 +357,21 @@ a {
   }
 }
 .header__link {
+  padding: 0.25rem 1rem;
+  display: inline-block;
   position: relative;
+  width: 100%;
   left: 0;
   color: var(--titleColor);
   transition: color 150ms ease-in-out, left 150ms ease-in-out;
 }
+@media (min-width: 64em) {
+  .header__link {
+    padding: 0;
+  }
+}
 .header__menu-option {
   position: relative;
-  padding: 0.25rem 1rem;
   transition: background-color 150ms ease-in-out;
 }
 @media (min-width: 64em) {
@@ -379,9 +387,6 @@ a {
   color: var(--primary);
 }
 @media (min-width: 64em) {
-  .header__menu-option {
-    padding: 0;
-  }
   .header__menu-option:hover {
     background-color: transparent;
   }
@@ -517,34 +522,42 @@ a {
 .header.close .header__nav-section {
   background-color: transparent;
 }
-.header.close .header__hamburger-stroke {
-  transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+.header.close .header__menu {
+  -webkit-animation: fade-out 300ms ease-in-out 1 forwards;
+          animation: fade-out 300ms ease-in-out 1 forwards;
 }
-.header.close .header__hamburger-stroke-top {
+.header.close .header__hamburger-stroke {
+  transition: opacity 150ms 150ms ease-in-out, top 150ms 150ms ease-in-out, rotate 100ms ease-in-out;
+}
+.header.close .header__hamburger-top {
   top: 0;
   rotate: 0deg;
 }
-.header.close .header__hamburger-stroke-middle {
+.header.close .header__hamburger-middle {
   opacity: 1;
 }
-.header.close .header__hamburger-stroke-bottom {
+.header.close .header__hamburger-bottom {
   top: 0;
   rotate: 0deg;
 }
 .header.open .header__nav-section {
   background-color: var(--white);
 }
-.header.open .header__hamburger-stroke {
-  transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
+.header.open .header__menu {
+  -webkit-animation: fade-in 300ms ease-in-out 1 forwards;
+          animation: fade-in 300ms ease-in-out 1 forwards;
 }
-.header.open .header__hamburger-stroke-top {
+.header.open .header__hamburger-stroke {
+  transition: opacity 0ms 150ms ease-in-out, top 150ms ease-in-out, rotate 150ms 150ms ease-in-out;
+}
+.header.open .header__hamburger-top {
   top: 0.6875rem;
   rotate: 45deg;
 }
-.header.open .header__hamburger-stroke-middle {
+.header.open .header__hamburger-middle {
   opacity: 0;
 }
-.header.open .header__hamburger-stroke-bottom {
+.header.open .header__hamburger-bottom {
   top: -0.6875rem;
   rotate: -45deg;
 }
