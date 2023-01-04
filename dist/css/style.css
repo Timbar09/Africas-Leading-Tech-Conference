@@ -757,6 +757,7 @@ a {
   margin-top: 2rem;
 }
 .speaker__cta-button {
+  cursor: pointer;
   position: absolute;
   inset: 0;
   padding: 1.5rem 2rem;
@@ -775,6 +776,9 @@ a {
   color: var(--white);
   background-color: var(--textColor);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+}
+.speaker__cta-button:active {
+  background-color: var(--titleColor);
 }
 @media (min-width: 40em) {
   .speaker__cta {

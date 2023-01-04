@@ -1,9 +1,10 @@
 // MOBILE MENU
-
 const body = document.querySelector('body');
 const header = document.querySelector('.header');
 const overlay = document.querySelector('.overlay');
 const hamburgerBtn = document.querySelector('#btnHumburger');
+// Media Query
+const mobileViewDown = window.matchMedia('(max-width: 39.9375em');
 
 const closeMenu = () => {
   body.classList.remove('noscroll');
@@ -81,11 +82,63 @@ const speakers = [
 
 const speakerGrid = document.querySelector('.speaker__grid');
 
-window.addEventListener('load', () => {
-  speakers.forEach((speaker) => {
-    speakerGrid.appendChild(speakerCard(speaker));
+// Load two speakers on mobile view, but veiw all six on desktop view
+if (mobileViewDown.matches) {
+  window.addEventListener('load', () => {
+    const firstTwo = speakers.slice(0, 2);
+
+    // Load the first two speakers
+    firstTwo.forEach((firstTwoSpeaker) => {
+      speakerGrid.appendChild(speakerCard(firstTwoSpeaker));
+    });
+
+    // Activate the expand button and deactivate the minimise button
+    const moreBtn = document.querySelector('.speaker__expand');
+    const lessBtn = document.querySelector('.speaker__minimize');
+
+    moreBtn.style.visibility = 'visible';
+    lessBtn.style.visibility = 'hidden';
+
+    moreBtn.addEventListener('click', () => {
+      expandSpeakers();
+    });
+
+    lessBtn.addEventListener('click', () => {
+      minimize();
+    });
+
+    // Eexpand the list of speakers
+    const expandSpeakers = () => {
+      const theRest = speakers.slice(2);
+
+      theRest.forEach((speaker) => {
+        speakerGrid.appendChild(speakerCard(speaker));
+      });
+
+      moreBtn.style.visibility = 'hidden';
+      lessBtn.style.visibility = 'visible';
+    };
+
+    // Minimize th list of speakers
+    const minimize = () => {
+      const speakerGrid = document.querySelector('.speaker__grid');
+      const loopLength = document.querySelectorAll('.speaker__card').length - 2;
+
+      for (let i = 0; i < loopLength; i++) {
+        speakerGrid.removeChild(document.querySelector('.speaker__card:last-child'));
+      }
+
+      moreBtn.style.visibility = 'visible';
+      lessBtn.style.visibility = 'hidden';
+    };
   });
-});
+} else {
+  window.addEventListener('load', () => {
+    speakers.forEach((speaker) => {
+      speakerGrid.appendChild(speakerCard(speaker));
+    });
+  });
+}
 
 // Functions for creating a speaker card
 
