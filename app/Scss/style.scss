@@ -336,6 +336,43 @@ a {
     }
   }
 
+  &__links {
+    display: none;
+    gap: 2rem;
+
+    &-link {
+      display: inline-block;
+      position: relative;
+      color: var(--textColor);
+      padding: 0.5rem 1rem;
+      transition: 150ms ease-in-out;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: -2.3125rem;
+        left: 0;
+        height: 0.15em;
+        width: 100%;
+        background: var(--primaryGradient);
+        opacity: 0;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      &:hover {
+        color: var(--primary);
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+
+    @media (min-width: 64em) {
+      display: flex;
+    }
+  }
+
   &__menu {
     visibility: hidden;
     position: absolute;
@@ -346,36 +383,23 @@ a {
     font-size: 1.75rem;
     background-color: var(--white);
 
+    &-link {
+      padding: 0.25rem 1rem;
+      display: inline-block;
+      position: relative;
+      width: 100%;
+      left: 0;
+      color: var(--titleColor);
+      transition: color 150ms ease-in-out, left 150ms ease-in-out;
+    }
+
     @media (min-width: 40em) {
       padding: 2rem 15% 4rem;
       font-size: 2rem;
     }
 
     @media (min-width: 64em) {
-      visibility: visible;
-      position: relative;
-      top: auto;
-      left: auto;
-      flex-direction: row;
-      align-items: center;
-      width: max-content;
-      gap: 3rem;
-      padding: 0;
-      font-size: inherit;
-    }
-  }
-
-  &__link {
-    padding: 0.25rem 1rem;
-    display: inline-block;
-    position: relative;
-    width: 100%;
-    left: 0;
-    color: var(--titleColor);
-    transition: color 150ms ease-in-out, left 150ms ease-in-out;
-
-    @media (min-width: 64em) {
-      padding: 0;
+      display: none;
     }
   }
 
@@ -383,29 +407,12 @@ a {
     position: relative;
     transition: background-color 150ms ease-in-out;
 
-    &-home {
-      @media (min-width: 64em) {
-        display: none;
-      }
-    }
-
     &:hover {
       background-color: var(--lightGrey);
 
-      .header__link {
+      .header__menu-link {
         left: 1rem;
         color: var(--primary);
-      }
-    }
-
-    @media (min-width: 64em) {
-      &:hover {
-        background-color: transparent;
-
-        .header__link {
-          left: 0;
-          color: var(--primary);
-        }
       }
     }
   }
@@ -561,7 +568,7 @@ a {
 
       &__hamburger {
         &-stroke {
-          transition: opacity 150ms 150ms ease-in-out, top 150ms 150ms ease-in-out, rotate 100ms ease-in-out;
+          transition: opacity 100ms 100ms ease-in-out, top 100ms 100ms ease-in-out, rotate 100ms ease-in-out;
         }
 
         &-top {
@@ -593,7 +600,7 @@ a {
 
       &__hamburger {
         &-stroke {
-          transition: opacity 0ms 150ms ease-in-out, top 150ms ease-in-out, rotate 150ms 150ms ease-in-out;
+          transition: opacity 0ms 100ms ease-in-out, top 100ms ease-in-out, rotate 100ms 100ms ease-in-out;
         }
 
         &-top {
@@ -747,7 +754,7 @@ a {
     list-style: none;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 2rem;
+    grid-gap: 3rem;
 
     @media (min-width: 64em) {
       grid-template-columns: repeat(2, 1fr);

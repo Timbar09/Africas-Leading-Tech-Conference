@@ -5,7 +5,6 @@ const overlay = document.querySelector('.overlay');
 const hamburgerBtn = document.querySelector('#btnHumburger');
 // Media Query
 const mobileViewDown = window.matchMedia('(max-width: 39.9375em');
-const tabletViewDown = window.matchMedia('(max-width: 63.9375em');
 
 const closeMenu = () => {
   body.classList.remove('noscroll');
@@ -23,22 +22,20 @@ const openMenu = () => {
   overlay.classList.remove('fade-out');
 };
 
-if (tabletViewDown.matches) {
-  hamburgerBtn.addEventListener('click', () => {
-    if (header.classList.contains('open')) {
-      closeMenu();
-    } else {
-      openMenu();
-    }
-  });
-
-  // When clicking an option on the mobile menu
-  const menuOptions = document.querySelectorAll('.header__link');
-
-  menuOptions.forEach((option) => option.addEventListener('click', () => {
+hamburgerBtn.addEventListener('click', () => {
+  if (header.classList.contains('open')) {
     closeMenu();
-  }));
-}
+  } else {
+    openMenu();
+  }
+});
+
+// When clicking an option on the mobile menu
+const menuOptions = document.querySelectorAll('.header__menu-link');
+
+menuOptions.forEach((option) => option.addEventListener('click', () => {
+  closeMenu();
+}));
 
 // SPEAKER SECTION
 
