@@ -47,7 +47,45 @@ const speakers = [
     title: 'Head IT Technitian at the Kenyan University of technology',
     bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
   },
+  {
+    name: 'Apara Dada',
+    photo: 'images/Apara-Dada.jpg',
+    title: 'Professor at the Botswana University of Information, Science and Technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
+  {
+    name: 'Apara Dada',
+    photo: 'images/Apara-Dada.jpg',
+    title: 'Professor at the Botswana University of Information, Science and Technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
+  {
+    name: 'Apara Dada',
+    photo: 'images/Apara-Dada.jpg',
+    title: 'Professor at the Botswana University of Information, Science and Technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
+  {
+    name: 'Apara Dada',
+    photo: 'images/Apara-Dada.jpg',
+    title: 'Professor at the Botswana University of Information, Science and Technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
+  {
+    name: 'Apara Dada',
+    photo: 'images/Apara-Dada.jpg',
+    title: 'Professor at the Botswana University of Information, Science and Technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
 ];
+
+const speakerGrid = document.querySelector('.speaker__grid');
+
+window.addEventListener('load', () => {
+  speakers.forEach((speaker) => {
+    speakerGrid.appendChild(speakerCard(speaker));
+  });
+});
 
 // Functions for creating a speaker card
 
