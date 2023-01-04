@@ -43,8 +43,68 @@ menuOptions.forEach((option) =>
 const speakers = [
   {
     name: 'Layla Isoke',
-    photo: '../../images/Layla-Isoke.jpg',
+    photo: 'images/Layla-Isoke.jpg',
     title: 'Head IT Technitian at the Kenyan University of technology',
     bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
   },
 ];
+
+// Functions for creating a speaker card
+
+const speakerCard = (speaker) => {
+  const card = document.createElement('li');
+  card.className = 'speaker__card flex flex-collumn';
+
+  card.appendChild(speakerPhoto(speaker));
+  card.appendChild(speakerText(speaker));
+
+  return card;
+};
+
+const speakerPhoto = (speaker) => {
+  // Speaker image
+  const image = document.createElement('img');
+  image.src = speaker.photo;
+  image.alt = speaker.name + "'s photo";
+
+  // Speaker span container
+  const spanContainer = document.createElement('span');
+  spanContainer.className = 'speaker__image-photo';
+
+  // Speaker div container
+  const divContainer = document.createElement('div');
+  divContainer.className = 'speaker__image';
+
+  spanContainer.appendChild(image);
+  divContainer.appendChild(spanContainer);
+
+  return divContainer;
+};
+
+const speakerText = (speaker) => {
+  // Speaker Name
+  const name = document.createElement('h3');
+  name.className = 'section-sub-title';
+  name.textContent = speaker.name;
+
+  // Speaker title
+  const title = document.createElement('p');
+  title.className = 'speaker__title';
+  title.textContent = speaker.title;
+
+  // Speaker bio information
+  const bio = document.createElement('p');
+  bio.className = 'speaker__bio';
+  bio.textContent = speaker.bio;
+
+  // Speaker text
+  const speakerText = document.createElement('div');
+  speakerText.className = 'speaker__text';
+
+  // Add speaker name, title, and bio to speakerText
+  speakerText.appendChild(name);
+  speakerText.appendChild(title);
+  speakerText.appendChild(bio);
+
+  return speakerText;
+};
