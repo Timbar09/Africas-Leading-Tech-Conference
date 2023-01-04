@@ -37,3 +37,14 @@ menuOptions.forEach((option) =>
     closeMenu();
   })
 );
+
+// SPEAKER SECTION
+
+const speakers = [
+  {
+    name: 'Layla Isoke',
+    photo: '../../images/Layla-Isoke.jpg',
+    title: 'Head IT Technitian at the Kenyan University of technology',
+    bio: 'Layla Isoke is a 26-year-old head IT technician whose life is dominated by solving the murder of her half sister, Sabrina Isoke. Sabrina was shot in 2020 and the killer was never brought to justice.',
+  },
+];

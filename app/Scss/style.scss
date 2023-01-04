@@ -436,13 +436,13 @@ a {
   &__hero {
     .container {
       position: relative;
-      background: url('/images/hero-bg-mobile.svg');
+      background: url('../../images/hero-bg-mobile.svg');
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
 
       @media (min-width: 64em) {
-        background-image: url('/images/hero-bg-desktop.svg');
+        background-image: url('../../images/hero-bg-desktop.svg');
       }
 
       &::before {
@@ -470,7 +470,7 @@ a {
     padding: 0.5rem 0;
     font-size: 2.5rem;
     font-weight: 900;
-    background-image: url('/images/textbg.jpg');
+    background-image: url('../../images/textbg.jpg');
     background-repeat: repeat;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -616,7 +616,7 @@ a {
   position: relative;
   color: var(--grey);
   background-color: var(--titleColor);
-  background-image: url('/images/connected.png');
+  background-image: url('../../images/connected.png');
 
   &::before {
     content: '';
@@ -735,6 +735,8 @@ a {
 // >>> SPEAKERS SECTION
 
 .speaker {
+  padding-bottom: 3rem;
+
   &__grid {
     padding: 2.5rem 0 0;
     margin: 0;
@@ -813,6 +815,42 @@ a {
   &__bio {
     margin: 0;
     padding-top: 0.5rem;
+  }
+
+  &__cta {
+    position: relative;
+    margin-top: 2rem;
+
+    &-button {
+      position: absolute;
+      inset: 0;
+      padding: 1.5rem 2rem;
+      gap: 0.5rem;
+      text-transform: uppercase;
+      color: var(--textColor);
+      border: solid 1px var(--textColor);
+      transition: color 150ms ease-in-out, background-color 150ms ease-in-out, box-shadow 150ms ease-in-out;
+
+      .fa-solid {
+        font-size: 1.25rem;
+        line-height: 1;
+        color: var(--primary);
+      }
+
+      &:hover {
+        color: var(--white);
+        background-color: var(--textColor);
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.35);
+      }
+    }
+
+    @media (min-width: 40em) {
+      display: none;
+    }
+  }
+
+  &__minimize {
+    visibility: hidden;
   }
 }
 
