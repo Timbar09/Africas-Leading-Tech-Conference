@@ -581,6 +581,7 @@ a {
   color: inherit;
 }
 .program__grid {
+  position: relative;
   list-style: none;
   margin: 0;
   padding: 2.5em 0 0;
@@ -594,6 +595,8 @@ a {
   }
 }
 .program__card {
+  position: relative;
+  bottom: 0;
   padding: 1em;
   gap: 1em;
   border: solid 0.25em transparent;
@@ -601,7 +604,7 @@ a {
   background-color: rgba(255, 255, 255, 0.055);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  transition: border 150ms ease-in-out, background-color 150ms ease-in-out, color 150ms ease-in-out;
+  transition: border 150ms ease-in-out, bottom 150ms ease-in-out, color 150ms ease-in-out;
 }
 @media (min-width: 23.4375em) {
   .program__card {
@@ -622,8 +625,8 @@ a {
 }
 .program__card:hover {
   border: solid 0.25em var(--white);
-  background-color: rgba(255, 255, 255, 0.085);
   color: var(--white);
+  bottom: 0.5rem;
 }
 .program__card-icon {
   font-size: 2.75em;
