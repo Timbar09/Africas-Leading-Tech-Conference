@@ -558,10 +558,6 @@ a {
 
   &.close {
     .header {
-      &__nav-section {
-        background-color: transparent;
-      }
-
       &__menu {
         animation: fade-out 300ms ease-in-out 1 forwards;
       }
@@ -656,6 +652,7 @@ a {
 
   &__card {
     position: relative;
+    left: 0;
     bottom: 0;
     padding: 1em;
     gap: 1em;
@@ -663,7 +660,7 @@ a {
     border-radius: var(--radius);
     background-color: rgba(255, 255, 255, 0.055);
     backdrop-filter: blur(3px);
-    transition: border 150ms ease-in-out, bottom 150ms ease-in-out, color 150ms ease-in-out;
+    transition: border 150ms ease-in-out, left 150ms ease-in-out, color 150ms ease-in-out;
 
     @media (min-width: 23.4375em) {
       flex-direction: row;
@@ -673,6 +670,7 @@ a {
     @media (min-width: 40em) {
       flex-direction: column;
       width: 30%;
+      transition: border 150ms ease-in-out, bottom 150ms ease-in-out, color 150ms ease-in-out;
     }
 
     @media (min-width: 64em) {
@@ -682,7 +680,12 @@ a {
     &:hover {
       border: solid 0.25em var(--white);
       color: var(--white);
-      bottom: 0.5rem;
+      left: 0.25rem;
+
+      @media (min-width: 40em) {
+        bottom: 0.25rem;
+        left: 0;
+      }
     }
 
     &-icon {

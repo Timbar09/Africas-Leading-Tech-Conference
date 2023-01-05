@@ -522,9 +522,6 @@ a {
   display: block;
   margin-top: 0.5rem;
 }
-.header.close .header__nav-section {
-  background-color: transparent;
-}
 .header.close .header__menu {
   -webkit-animation: fade-out 300ms ease-in-out 1 forwards;
           animation: fade-out 300ms ease-in-out 1 forwards;
@@ -596,6 +593,7 @@ a {
 }
 .program__card {
   position: relative;
+  left: 0;
   bottom: 0;
   padding: 1em;
   gap: 1em;
@@ -604,7 +602,7 @@ a {
   background-color: rgba(255, 255, 255, 0.055);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
-  transition: border 150ms ease-in-out, bottom 150ms ease-in-out, color 150ms ease-in-out;
+  transition: border 150ms ease-in-out, left 150ms ease-in-out, color 150ms ease-in-out;
 }
 @media (min-width: 23.4375em) {
   .program__card {
@@ -616,6 +614,7 @@ a {
   .program__card {
     flex-direction: column;
     width: 30%;
+    transition: border 150ms ease-in-out, bottom 150ms ease-in-out, color 150ms ease-in-out;
   }
 }
 @media (min-width: 64em) {
@@ -626,7 +625,13 @@ a {
 .program__card:hover {
   border: solid 0.25em var(--white);
   color: var(--white);
-  bottom: 0.5rem;
+  left: 0.25rem;
+}
+@media (min-width: 40em) {
+  .program__card:hover {
+    bottom: 0.25rem;
+    left: 0;
+  }
 }
 .program__card-icon {
   font-size: 2.75em;
