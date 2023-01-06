@@ -2,7 +2,7 @@
 
 <div>
 
-  <h1><b>Africas Leading Tech Conference</b></h1><br/><br/>
+  <h1><b>Africas Leading Tech Conference Page</b></h1><br/><br/>
 
 </div>
 
@@ -24,11 +24,11 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Africas Leading Tech Conference <a name="about-project"></a>
+# 📖 Africas Leading Tech Conference Page <a name="about-project"></a>
 
-**Africas-Leading-Tech-Conference** is a tech conference page which brings together some of the world's most renowned tech professionals, with the African professionals at the core.
+**Africas Leading Tech Conference** is a tech conference page which brings together some of the world's most renowned tech professionals, with the African professionals at the core.
 
-Whatch this [video](https://www.loom.com/share/d3922c70b2b744d59e6b68b58ea0d1dd) to learn more about the project.
+Whatch this [video](https://www.loom.com/share/41983cc4935e4d1baf1f93bfbce6e874) to learn more about the project.
 
 ## 🛠 Built With <a name="built-with"></a>
 
